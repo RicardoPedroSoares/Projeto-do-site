@@ -1,0 +1,464 @@
+/* CSS base placeholder */
+
+/* Reset básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cabeçalho fixo elegante */
+
+.topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 15px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  margin-left: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #D4AF37;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #FFD700;
+}
+
+.navegacao ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.navegacao a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.navegacao a:hover {
+  color: #FFD700;
+  transform: translateY(-2px);
+}
+
+.navegacao a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.3s ease;
+}
+
+.navegacao a:hover::after {
+  width: 100%;
+}
+
+/* Seção Hero (destaque principal) */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imagens/fundo-metal.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #D4AF37;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #FFD700;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Seções gerais */
+.section {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+.section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  color: #D4AF37;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #FFD700;
+}
+
+.section p, .section ul {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.8;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.section ul li {
+  background: url('../imagens/check-gold.png') no-repeat left center;
+  background-size: 18px;
+  padding-left: 35px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* === GALERIA E CARROSSEL CORRIGIDO === */
+.galeria {
+  background-color: #111;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  color: #D4AF37;
+  position: relative;
+  display: inline-block;
+}
+
+.galeria h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #FFD700;
+}
+
+/* CONTAINER DO CARROSSEL */
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  height: 500px; /* Altura fixa para consistência */
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+/* TRACK DO CARROSSEL */
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+/* IMAGENS - ÚNICA REGRAS, SEM DUPLICAÇÃO */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mostra a imagem inteira, sem cortar */
+  border-radius: 8px;
+  flex-shrink: 0; /* Impede redimensionamento */
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.02);
+}
+
+/* BOTÕES */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #D4AF37;
+  color: #000;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.carousel-btn:hover {
+  background-color: #FFD700;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Desative o zoom do navegador em imagens */
+.carousel img {
+  pointer-events: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(212, 175, 55, 0.9);
+  color: #000;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.carousel-btn:hover {
+  background-color: #D4AF37;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Contato */
+.contato {
+  background-color: #000;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 14px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #D4AF37;
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.info-contato {
+  margin-top: 40px;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.info-contato strong {
+  color: #D4AF37;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #777;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+.info-contato {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Ícone do WhatsApp flutuante */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .logo {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+  }
+
+  .navegacao ul {
+    gap: 15px;
+    margin-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .prev { left: 5px; }
+  .next { right: 5px; }
+
+  .whatsapp-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-icon img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 12px;
+  }
+}

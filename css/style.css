@@ -84,8 +84,8 @@ body {
 
 /* Seção Hero (destaque principal) */
 .hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imagens/fundo-metal.jpg') no-repeat center center/cover;
+  height: 50vh;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,6 +94,8 @@ body {
   color: #fff;
   padding: 0 20px;
   position: relative;
+  opacity: 100%;
+  border-radius: 10%;
 }
 
 .hero h1 {
@@ -129,6 +131,23 @@ body {
   color: #FFD700;
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+.fundo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  position: relative;
+  background-image: url(../imagens/soldador.png);
+  background-size: cover;         /* cobre toda a área */
+  background-position: center;    /* centraliza a imagem */
+  background-repeat: no-repeat;   /* evita repetição */
+  padding: 4rem 2rem;             /* espaçamento interno */
 }
 
 /* Seções gerais */

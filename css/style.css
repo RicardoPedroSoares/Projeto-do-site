@@ -94,8 +94,9 @@ body {
   color: #fff;
   padding: 0 20px;
   position: relative;
-  opacity: 100%;
+  opacity: 50%;
   border-radius: 10%;
+  transition: 2.5s;
 }
 
 .hero h1 {
@@ -107,30 +108,35 @@ body {
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 200%;
   max-width: 700px;
   margin-bottom: 30px;
   color: #ddd;
 }
 
+.hero:hover{
+  opacity: 100%;
+  transition: 2.5s;
+}
+
 .btn {
   display: inline-block;
   padding: 14px 32px;
-  background-color: #D4AF37;
+  background-color: #25D366;
   color: #000;
   font-weight: 600;
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.4s ease;
-  border: 2px solid #D4AF37;
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  border: 2px solid #25D366;
+  box-shadow: 0 5px 15px rgba(32, 124, 23, 0.3);
 }
 
 .btn:hover {
   background-color: transparent;
-  color: #FFD700;
+  color: #25D366;
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 10px 25px rgba(32, 124, 23, 0.3);
 }
 
 .fundo {
@@ -410,7 +416,6 @@ footer {
 .whatsapp-icon img {
   width: 40px;
   height: 40px;
-  filter: brightness(0) invert(1);
 }
 
 /* Responsividade */

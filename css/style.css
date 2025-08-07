@@ -97,6 +97,7 @@ body {
   opacity: 50%;
   border-radius: 10%;
   transition: 2.5s;
+  max-width: 100%;
 }
 
 .hero h1 {

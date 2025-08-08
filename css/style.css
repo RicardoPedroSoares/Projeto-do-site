@@ -82,6 +82,16 @@ body {
   width: 100%;
 }
 
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #777;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
 /* Seção Hero (destaque principal) */
 .hero {
   height: 50vh;
@@ -140,6 +150,7 @@ body {
   box-shadow: 0 10px 25px rgba(32, 124, 23, 0.3);
 }
 
+/* Fundo com imagem :) */
 .fundo {
   height: 100vh;
   display: flex;
@@ -155,6 +166,28 @@ body {
   background-position: center;    /* centraliza a imagem */
   background-repeat: no-repeat;   /* evita repetição */
   padding: 4rem 2rem;             /* espaçamento interno */
+}
+
+/* Sobre */
+.sobre {
+  position: relative;
+  display: flex;
+  margin: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25%;
+}
+
+.sobre h1 {
+  color: #FFD700;
+  font-size: 325%;
+}
+
+.sobre p {
+  font-size: 150%;
 }
 
 /* Seções gerais */
@@ -375,16 +408,6 @@ body {
 
 .info-contato strong {
   color: #D4AF37;
-}
-
-/* Rodapé */
-footer {
-  background-color: #000;
-  color: #777;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  border-top: 1px solid #333;
 }
 
 .info-contato {

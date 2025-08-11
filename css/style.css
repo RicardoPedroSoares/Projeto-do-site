@@ -81,12 +81,16 @@ body {
 /* Rodapé */
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #000;
   color: #777;
-  text-align: center;
   padding: 20px 0;
-  font-size: 0.9rem;
+  text-align: center;
   border-top: 1px solid #333;
+  font-size: 0.9rem;
 }
 
 /* Seção Hero (destaque principal) */
